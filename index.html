@@ -16,7 +16,7 @@
 if(document.visibilityState==="visible"&&!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("anim")</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400..600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400..600&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #f5f5f9; --surface: #ffffff; --surface-2: #efeff6;
@@ -136,11 +136,10 @@ if(document.visibilityState==="visible"&&!matchMedia("(prefers-reduced-motion: r
     margin: 22px 0 26px; font-weight: 600;
     font-size: clamp(48px, 9.4vw, 112px); line-height: .92; letter-spacing: -.05em;
   }
-  h1 .dot { color: var(--accent); }
   .lead { margin: 0; max-width: 34ch; font-size: clamp(19px, 2.3vw, 24px); line-height: 1.42; color: var(--ink-2); letter-spacing: -.01em; }
   .lead a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--line-2); text-underline-offset: 4px; transition: text-decoration-color .2s; }
   .lead a:hover { text-decoration-color: var(--accent); }
-  .lead em { font-family: "Instrument Serif", ui-serif, Georgia, serif; font-style: italic; font-size: 1.2em; color: var(--ink); letter-spacing: 0; }
+  .lead strong { font-weight: 600; color: var(--ink); }
 
   /* Live result row */
   .rs {
@@ -278,8 +277,8 @@ if(document.visibilityState==="visible"&&!matchMedia("(prefers-reduced-motion: r
 <main>
   <section class="hero wrap" aria-labelledby="name">
     <p class="prompt mono"><span class="p">osquery&gt;</span> <span id="hero-q" data-q="SELECT * FROM allen;"><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> allen;</span><span class="caret" aria-hidden="true"></span></p>
-    <h1 id="name">Allen Houchins<span class="dot">.</span></h1>
-    <p class="lead">Device management, GitOps and osquery tooling at <a href="https://fleetdm.com">Fleet</a>, plus a few trackers that <em>keep themselves up to date.</em></p>
+    <h1 id="name">Allen Houchins</h1>
+    <p class="lead">Device management, GitOps and osquery tooling at <a href="https://fleetdm.com">Fleet</a>, plus a few trackers that <strong>keep themselves up to date.</strong></p>
 
     <div class="rs" role="group" aria-label="Live numbers from my trackers">
       <div class="cell">

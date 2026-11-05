@@ -224,19 +224,6 @@ if(document.visibilityState==="visible"&&!matchMedia("(prefers-reduced-motion: r
   .row:hover .go, .row:focus-within .go { transform: translateX(4px); color: var(--accent); }
   .rows-foot { margin: 0; padding: 14px 26px 16px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--ink-3); }
 
-  /* Off the clock */
-  .otc { margin-top: clamp(88px, 12vw, 140px); }
-  .otc .query { font-size: clamp(14px, 1.7vw, 17px); color: var(--ink-2); }
-  .hobbies {
-    list-style: none; padding: 0; margin: 18px 0 0; display: flex; flex-wrap: wrap; gap: 0 .32em;
-    font-family: "Instrument Serif", ui-serif, Georgia, serif; font-style: italic;
-    font-size: clamp(44px, 8.4vw, 96px); line-height: 1.02; letter-spacing: -.015em;
-  }
-  .hobbies li { transition: color .3s; }
-  .hobbies li:hover { color: var(--accent); }
-  .hobbies li:not(:last-child)::after { content: ","; color: var(--ink-3); }
-  .otc .note { margin: 18px 2px 0; font-size: 12.5px; color: var(--ink-3); }
-
   /* Footer */
   .foot { margin-top: clamp(96px, 12vw, 150px); padding-top: 26px; padding-bottom: 44px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 14px 28px; font-size: 13.5px; color: var(--ink-3); }
   .foot p { margin: 0; }
@@ -427,16 +414,6 @@ if(document.visibilityState==="visible"&&!matchMedia("(prefers-reduced-motion: r
     </div>
   </section>
 
-  <section class="otc wrap" aria-labelledby="otc-h">
-    <h2 class="sr" id="otc-h">Off the clock</h2>
-    <p class="query mono"><span class="p">osquery&gt;</span> <span class="kw">SELECT</span> hobby <span class="kw">FROM</span> off_the_clock;</p>
-    <ul class="hobbies">
-      <li>hunting</li>
-      <li>homesteading</li>
-      <li>comic books</li>
-    </ul>
-    <p class="note mono">3 rows in set</p>
-  </section>
 </main>
 
 <footer class="foot wrap">

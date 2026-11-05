@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Allen Houchins · Tools</title>
+<meta name="description" content="Device management, GitOps and osquery tools by Allen Houchins (Fleet).">
+<style>
+  :root { --bg:#ffffff; --panel:#f6f8fa; --border:#d0d7de; --text:#192147; --muted:#57606a; --accent:#5250e0; --green:#1f8f5a; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0d1117; --panel:#161b22; --border:#30363d; --text:#e6edf3; --muted:#8b949e; --accent:#8b8aff; --green:#3db67b; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 56px 16px 72px; }
+  .mono { font-family: ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+  .prompt { color: var(--muted); font-size: 15px; }
+  .prompt b { color: var(--accent); font-weight: 500; }
+  h1 { font-size: clamp(34px, 6vw, 52px); line-height:1.05; margin: 10px 0 8px; letter-spacing: -0.5px; }
+  .lead { color: var(--muted); font-size: 19px; margin: 0 0 40px; }
+  .lead a { color: var(--accent); text-decoration: none; }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 40px 0 12px; font-weight: 600; }
+  .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+  a.card { display:block; padding: 18px 18px 16px; background: var(--panel); border:1px solid var(--border); border-radius: 12px; color: inherit; text-decoration: none; transition: border-color .15s, transform .15s; }
+  a.card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .card .name { font-weight: 650; font-size: 17px; }
+  .card .desc { color: var(--muted); font-size: 14.5px; margin-top: 4px; }
+  .card .tag { display:inline-block; margin-top: 10px; font-size: 12px; color: var(--green); }
+  footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; display:flex; gap: 16px; flex-wrap: wrap; }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="prompt mono"><b>osquery&gt;</b> SELECT * FROM tools WHERE author = 'allen';</div>
+  <h1>Allen Houchins</h1>
+  <p class="lead">Device management, GitOps &amp; osquery tooling at <a href="https://fleetdm.com">Fleet</a>. Everything here is free and open source.</p>
+
+  <h2>Live trackers</h2>
+  <div class="grid">
+    <a class="card" href="https://fmalibrary.com">
+      <div class="name">FMA Library</div>
+      <div class="desc">Every Fleet-maintained app, version and patch, tracked daily.</div>
+      <span class="tag mono">● updated hourly</span>
+    </a>
+    <a class="card" href="https://allenhouchins.github.io/new-casks-tracker/">
+      <div class="name">New Homebrew casks</div>
+      <div class="desc">Brand-new casks as they land in Homebrew, with an RSS feed.</div>
+      <span class="tag mono">● updated every 6 hours</span>
+    </a>
+  </div>
+
+  <h2>Windows tools</h2>
+  <div class="grid">
+    <a class="card" href="https://allenhouchins.github.io/applocker-fleet-converter/">
+      <div class="name">AppLocker → Fleet</div>
+      <div class="desc">Convert AppLocker XML exports into Fleet-ready MDM profiles. Runs in your browser.</div>
+      <span class="tag mono">web tool</span>
+    </a>
+    <a class="card" href="https://allenhouchins.github.io/wdac-fleet-converter/">
+      <div class="name">App Control (WDAC) → Fleet</div>
+      <div class="desc">Convert App Control for Business policy XML into Fleet-ready MDM profiles.</div>
+      <span class="tag mono">web tool</span>
+    </a>
+  </div>
+
+  <h2>Code</h2>
+  <div class="grid">
+    <a class="card" href="https://github.com/allenhouchins/fleet-extensions">
+      <div class="name">fleet-extensions</div>
+      <div class="desc">osquery extensions that add tables Fleet doesn't ship: Santa, Defender, Homebrew and more.</div>
+      <span class="tag mono">Go</span>
+    </a>
+    <a class="card" href="https://github.com/allenhouchins/fleet-software-yaml-collection">
+      <div class="name">fleet-software-yaml-collection</div>
+      <div class="desc">Fleet-ready software YAML for macOS PKG and Windows MSI/EXE installers, generated from Homebrew, Installomator and WinGet.</div>
+      <span class="tag mono">Go · Actions</span>
+    </a>
+    <a class="card" href="https://github.com/allenhouchins/death-to-extension-attributes">
+      <div class="name">death-to-extension-attributes</div>
+      <div class="desc">Jamf extension attributes vs. a single Fleet query, side by side.</div>
+      <span class="tag mono">osquery</span>
+    </a>
+  </div>
+
+  <h2>Off the clock</h2>
+  <div class="grid">
+    <a class="card" href="https://github.com/allenhouchins/farrowing-date-calculator">
+      <div class="name">KuneKune farrowing calculator</div>
+      <div class="desc">Estimates when a KuneKune sow is due. Homestead tooling.</div>
+      <span class="tag mono">🐖</span>
+    </a>
+  </div>
+
+  <footer>
+    <a href="https://github.com/allenhouchins">GitHub</a>
+    <a href="https://fleetdm.com">fleetdm.com</a>
+    <a href="https://www.linkedin.com/in/allenhouchins">LinkedIn</a>
+  </footer>
+</main>
+</body>
+</html>
